@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Just for you</title>
+        <link rel="shortcut icon" type="image/x-icon" href="picture/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+SK:wght@100..400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Love+Light&family=Playwrite+SK:wght@100..400&display=swap" rel="stylesheet">
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background:url(picture/back.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        .main {
+
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(128, 5, 5, 0.116);
+            backdrop-filter: blur(10px);
+            transform: translateX(-50%) translateY(-50%);
+            padding: 60px;
+            border-radius: 10px;
+        }
+        .text {
+            text-align: center;
+            line-height: 80px;
+        }
+        .img img{
+            width: 40%;
+            position: relative;
+            text-align: center;
+            left: 24%;
+            margin: 20px;
+
+        }
+        a {
+            text-decoration: none;
+            border: 2px solid rgba(255, 0, 0, 0.353);
+            padding: 0 20px;
+            font-size: 20px;
+            color: black;
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+            font-family: "Love Light", cursive;
+            font-size: 20pt;
+            font-weight: 500;
+        }
+        a:hover {
+            background-color: rgb(39, 37, 37);
+            color: rgb(255, 0, 0);
+            border-color: rgba(255, 255, 255, 0.021);
+        }
+
+        .ans {
+            justify-content: space-between;
+            display: flex;
+            font-size: 20pt;
+        }
+
+        h1 {
+            position: relative;
+            top: -50px;
+            font-family: "Playwrite SK", cursive;
+        }
+        @media  (max-width: 780px) {
+            body{
+                background: url(picture/back2.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .main{
+                position: absolute;
+                top: 35%;
+            }
+
+            .ans{
+                gap: 30px;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="img">
+                <img src="picture/love.png" alt="error">
+            </div>
+            <div class="text">
+                <h1>Do you love me?</h1>
+                <div class="ans">
+                    <div class="yes">
+                        <a href="yes.html" id="yes">Yes</a>
+                    </div>
+                    <div class="no">
+                        <a href="yes.html" id="no">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const yesButton = document.getElementById('yes');
+            const noButton = document.getElementById('no');
+            
+            yesButton.addEventListener('mouseover', () => {
+               
+            });
+
+            noButton.addEventListener('mouseover', () => {
+                noButton.textContent = 'Yes';     
+                yesButton.textContent = 'No';
+            });
+            
+            noButton.addEventListener('mouseout', () => {
+                noButton.textContent = 'No';         
+                yesButton.textContent = 'Yes';       
+            });
+            
+
+        
+    </script>
+    </body>
+</html>
